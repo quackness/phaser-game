@@ -42,8 +42,11 @@ function preload() {
 }
 
 function create() {
-  music = this.sound.add('backgroundMusic', { volume: 0.5, loop: true });
+  //instructiosn how to add music taken from chat gtp 
+  music = this.sound.add('backgroundMusic', { volume: 0.1, loop: false });
   music.play();
+
+
   //The background image is 800 x 600 pixels in size, 400 and 300 places it in the center
   this.add.image(400, 300, 'sky');
   platforms = this.physics.add.staticGroup();
@@ -149,9 +152,12 @@ function collectStar(player, star) {
   }
 }
 
+
 function hitBomb(player, bomb) {
   this.physics.pause();
   player.setTint(0xff0000);
   player.anims.play('turn');
   gameOver = true;
 }
+
+
