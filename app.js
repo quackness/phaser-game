@@ -24,6 +24,7 @@ var stars;
 var score = 0;
 var scoreText;
 let bombs;
+let music;
 
 var game = new Phaser.Game(config);
 
@@ -36,9 +37,13 @@ function preload() {
     'assets/dude.png',
     { frameWidth: 32, frameHeight: 48 }
   );
+  //music comes from the web site https://www.chosic.com/download-audio/39324/
+  this.load.audio('backgroundMusic', 'assets/chaos.mp3');
 }
 
 function create() {
+  music = this.sound.add('backgroundMusic', { volume: 0.5, loop: true });
+  music.play();
   //The background image is 800 x 600 pixels in size, 400 and 300 places it in the center
   this.add.image(400, 300, 'sky');
   platforms = this.physics.add.staticGroup();
