@@ -1,4 +1,4 @@
-
+var gameContainer = document.querySelector('#phaser-game');
 
 var config = {
   type: Phaser.AUTO,
@@ -106,6 +106,7 @@ function create() {
 
   //add score text
   scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+  gameContainer.appendChild(game.canvas);
 }
 
 
