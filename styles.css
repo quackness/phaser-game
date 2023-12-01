@@ -25,3 +25,9 @@ footer {
   background-color: #967adc;
   height: 50px;
 }
+
+h1 {
+  font-family: 'Comic Neue', cursive;
+  color: white;
+  text-align: center;
+}
