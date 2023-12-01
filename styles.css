@@ -9,7 +9,7 @@ html {
 }
 
 nav {
-  height: 10%;
+  height: 20%;
   background-color: #967adc;
   height: 50px;
 }
@@ -36,4 +36,19 @@ h1 {
   font-family: 'Comic Neue', cursive;
   color: white;
   text-align: center;
+  /* //issue with the the font size, the rror  Refused to apply style from 'http://127.0.0.1:5500/assignment-2-quackness/tailwindcss/utilities' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. */
+  font-size: 50px;
+}
+
+.higlights {
+  display: flex;
+}
+
+.higlights-text {
+  flex-direction: column;
+}
+
+.test {
+  background-color: black;
+  color: red;
 }

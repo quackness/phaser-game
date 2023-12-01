@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "postcss styles.css -o output.css"
+    "build:css": "postcss styles.css -o output.css",
+    "watch": "postcss styles.css -o output.css --watch"
   },
   "keywords": [],
   "author": "",
