@@ -1,4 +1,8 @@
+//toutorial: https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
+
 var gameContainer = document.querySelector('#phaser-game');
+console.log(gameContainer)
+
 
 var config = {
   type: Phaser.AUTO,
@@ -104,10 +108,17 @@ function create() {
   this.physics.add.overlap(player, stars, collectStar, null, this);
   this.physics.add.collider(player, bombs, hitBomb, null, this);
 
-  //add score text
-  scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+  //add score text, extra text modification insipred by: https://photonstorm.github.io/phaser3-docs/Phaser.GameObjects.Text.html
+  scoreText = this.add.text(16, 16, 'score: 0', {
+    fontSize: '32px', fill: 'coral', fontStyle: 'italic ', fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif'
+  });
   gameContainer.appendChild(game.canvas);
 }
+
+let grabCanvas = document.querySelector('canvas');
+console.log(grabCanvas);
+//credit: https://tailwindcss.com/docs/border-style
+grabCanvas.classList.add('border', 'border-double', 'border-20', 'border-y-rose-500', 'rounded-md', 'outline-dotted', 'outline-offset-8');
 
 
 function update() {
@@ -162,5 +173,3 @@ function hitBomb(player, bomb) {
   player.anims.play('turn');
   gameOver = true;
 }
-
-
