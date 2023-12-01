@@ -16,64 +16,103 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&family=Playpen+Sans:wght@600&display=swap"
+    rel="stylesheet">
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <title>After School Program</title>
 </head>
 
 <body>
-  <nav>Nav</nav>
-
-  <h1>Middle Sackville Afterschool Program</h1>
-  <p>Unlocking potential, fostering creativity, and building a brighter future - our after-school program is designed to
-    provide a safe and engaging environment for students to learn and grow beyond the classroom. We offer a variety of
-    enriching activities that cater to different interests and age groups.</p>
-  <p>Our dedicated team of educators and mentors is committed to inspiring a love for learning while nurturing important
-    life skills. From homework support to hands-on projects, our program aims to supplement and enhance the educational
-    experience for every participant.</p>
-  <p>Join us as we create a supportive community where each child is encouraged to explore their interests, develop new
-    skills, and build lasting friendships. Our after-school program is not just an extension of the school day; it's a
-    unique opportunity for personal growth and discovery.</p>
-  <p>Key Features:</p>
-  <ul>
-    <li>Homework assistance and academic support</li>
-    <li>Exciting extracurricular activities</li>
-    <li>Team-building exercises</li>
-    <li>Arts and crafts projects</li>
-    <li>Physical fitness activities</li>
-  </ul>
-  <p>Enroll your child today and let's embark on this educational journey together!</p>
-  <button class="btn btn-lg">Register</button>
-
-  <div class="higlights">
-    <img src="images/exploration.jpg" alt="After School Program Image" style="max-width: 100%; height: auto;">
-    <div class="higlights-text">
-      <p><strong>Exploration and Creativity</strong></p>
-      <p>At our program, we believe in fostering exploration and creativity. Our students engage in hands-on activities
-        that encourage imagination and critical thinking. Join us on a journey where learning is not only educational
-        but
-        also a whole lot of fun!</p>
+  <header>
+    <div class="header-container">
+      <nav>
+        <!-- <a id="navicon" href="#"><img src="images/navicon.png" alt="navicon"></a> -->
+        <ul>
+          <li><a href="#register">Register</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#game">Game</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <div class="higlights">
-    <img src="images/stem.jpg" alt="STEM Learning Image" style="max-width: 100%; height: auto;">
-    <div class="higlights-text">
-      <p><strong>STEM Learning Adventures</strong></p>
-      <p>Embark on exciting STEM (Science, Technology, Engineering, and Mathematics) adventures with our specialized
-        program. From robotics workshops to hands-on science experiments, we ignite curiosity and passion for STEM
-        fields,
-        preparing your child for the challenges of the future.</p>
+  <main>
+    <h1>Middle Sackville Afterschool Program</h1>
+    <div class="intro">
+      <p>Unlocking potential, fostering creativity, and building a brighter future - our after-school program is
+        designed
+        to
+        provide a safe and engaging environment for students to learn and grow beyond the classroom. We offer a variety
+        of
+        enriching activities that cater to different interests and age groups.</p>
+      <p>Our dedicated team of educators and mentors is committed to inspiring a love for learning while nurturing
+        important
+        life skills. From homework support to hands-on projects, our program aims to supplement and enhance the
+        educational
+        experience for every participant.</p>
+      <p>Join us as we create a supportive community where each child is encouraged to explore their interests, develop
+        new
+        skills, and build lasting friendships. Our after-school program is not just an extension of the school day; it's
+        a
+        unique opportunity for personal growth and discovery.</p>
     </div>
-  </div>
-  <div class="higlights">
-    <img src="images/rec.jpg" alt="Outdoor Recreation Image" style="max-width: 100%; height: auto;">
-    <div class="higlights-text">
-      <p><strong>Outdoor Recreation and Team Building</strong></p>
-      <p>Our after-school program extends beyond the classroom walls. Join us for outdoor adventures that promote
-        teamwork, leadership, and a healthy, active lifestyle. From nature hikes to team sports, we believe in holistic
-        development that goes beyond academic achievement.</p>
+    <div class="key-features">
+      <h2 class="keys">Key Features:</h2>
+      <ul>
+        <li>Homework assistance and academic support</li>
+        <li>Exciting extracurricular activities</li>
+        <li>Team-building exercises</li>
+        <li>Arts and crafts projects</li>
+        <li>Physical fitness activities</li>
+      </ul>
     </div>
-  </div>
+    <div class="call-to-action" id="register">
+      <p>🌈 Enroll your child today and let's embark on this educational journey together! 🌈</p>
+      <button class="btn btn-lg">Register</button>
+    </div>
+    <div class="higlights">
+      <img src="images/exploration.jpg" alt="After School Program Image">
+      <div class="higlights-text">
+        <p><strong>Exploration and Creativity</strong></p>
+        <p>At our program, we believe in fostering exploration and creativity. Our students engage in hands-on
+          activities
+          that encourage imagination and critical thinking. Join us on a journey where learning is not only educational
+          but
+          also a whole lot of fun!</p>
+      </div>
+    </div>
+
+    <div class="higlights" id="highlights">
+      <img src="images/stem.jpg" alt="STEM Learning Image">
+      <div class="higlights-text">
+        <p><strong>STEM Learning Adventures</strong></p>
+        <p>Embark on exciting STEM (Science, Technology, Engineering, and Mathematics) adventures with our specialized
+          program. From robotics workshops to hands-on science experiments, we ignite curiosity and passion for STEM
+          fields,
+          preparing your child for the challenges of the future.</p>
+      </div>
+    </div>
+    <div class="higlights">
+      <img src="images/rec.jpg" alt="Outdoor Recreation Image">
+      <div class="higlights-text">
+        <p><strong>Outdoor Recreation and Team Building</strong></p>
+        <p>Our after-school program extends beyond the classroom walls. Join us for outdoor adventures that promote
+          teamwork, leadership, and a healthy, active lifestyle. From nature hikes to team sports, we believe in
+          holistic
+          development that goes beyond academic achievement.</p>
+      </div>
+    </div>
+    <div id="phaser-game">
+
+    </div>
+
+  </main>
+
+
+
 
   <footer>
 
