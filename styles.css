@@ -1,3 +1,27 @@
 html {
   overflow: auto;
 }
+
+nav {
+  height: 10%;
+  background-color: #967adc;
+  height: 50px;
+}
+
+body {
+  background-color: #98ddca;
+}
+
+.btn {
+  background-color: #ff6f61;
+  color: white;
+}
+
+.higlights {
+  background-color: #f9e58a;
+}
+
+footer {
+  background-color: #967adc;
+  height: 50px;
+}
