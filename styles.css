@@ -4,69 +4,7 @@
 @import 'tailwindcss/utilities';
 
 
-html {
-  overflow: auto;
-}
-
-#navicon img {
-  height: 40px;
-}
-
-header {
-  color: white;
-  padding: 30px 10px;
-}
-
-.header-container {
-  display: flex;
-  /* justify-content: space-between; */
-  justify-content: flex-end;
-  align-items: center;
-  margin: 0 5%;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-
-body {
-  background-color: #98ddca;
-}
-
-main {
-  margin: 5% 7% 3% 7%;
-}
-
-
-.btn {
-  background-color: #ff6f61;
-  color: white;
-  width: 20%;
-  font-size: 28px;
-}
-
-.btn:hover {
-  color: #ff6f61;
-  background-color: aliceblue;
-}
-
 .higlights {
-  background-color: #f9e58a;
   margin-top: 3%;
   width: 85%;
   display: flex;
@@ -75,18 +13,11 @@ main {
   margin: 2% auto;
 }
 
-
-footer {
-  background-color: #967adc;
-  padding: 60px 10px;
-}
-
 h1 {
   font-family: 'Comic Neue', cursive;
 }
 
 .higlights {
-  display: flex;
   border: 5px dotted white;
 }
 
@@ -137,7 +68,6 @@ li::marker {
   font-size: larger;
   color: #ff6f61
 }
-
 
 li {
   font-size: large;
