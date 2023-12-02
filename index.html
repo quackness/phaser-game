@@ -24,7 +24,9 @@
 </head>
 
 <body>
-  <header>
+  <!-- https://tailwindcss.com/docs/gradient-color-stops -->
+  <!-- https://tailwindcss.com/docs/border-width -->
+  <header class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 border-b-4 border-indigo-500">
     <div class="header-container">
       <nav>
         <ul>
@@ -37,20 +39,24 @@
   </header>
 
   <main>
-    <h1>Middle Sackville Afterschool Program</h1>
-    <div class="intro">
-      <p>Unlocking potential, fostering creativity, and building a brighter future - our after-school program is
+    <!-- https://tailwindcss.com/docs/text-color https://tailwindcss.com/docs/font-size https://tailwindcss.com/docs/margin-->
+    <h1 class="text-yellow-300 text-5xl text-center mb-4">Middle Sackville Afterschool Program</h1>
+    <div class="intro mb-[3%]">
+      <p class="mb-4">Unlocking potential, fostering creativity, and building a brighter future - our after-school
+        program is
         designed
         to
         provide a safe and engaging environment for students to learn and grow beyond the classroom. We offer a variety
         of
         enriching activities that cater to different interests and age groups.</p>
-      <p>Our dedicated team of educators and mentors is committed to inspiring a love for learning while nurturing
+      <p class="mb-4">Our dedicated team of educators and mentors is committed to inspiring a love for learning while
+        nurturing
         important
         life skills. From homework support to hands-on projects, our program aims to supplement and enhance the
         educational
         experience for every participant.</p>
-      <p>Join us as we create a supportive community where each child is encouraged to explore their interests, develop
+      <p class="mb-4">Join us as we create a supportive community where each child is encouraged to explore their
+        interests, develop
         new
         skills, and build lasting friendships. Our after-school program is not just an extension of the school day; it's
         a
@@ -58,7 +64,7 @@
     </div>
     <div class="key-features">
       <h2 class="keys">Key Features:</h2>
-      <ul>
+      <ul class="m-[2%]">
         <li>Homework assistance and academic support</li>
         <li>Exciting extracurricular activities</li>
         <li>Team-building exercises</li>
