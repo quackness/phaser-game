@@ -31,11 +31,6 @@
   color: brown;
 }
 
-ul {
-  list-style: disc;
-  margin-left: 5%;
-}
-
 li::marker {
   color: #ff6f61;
 }
@@ -56,27 +51,12 @@ li::marker {
 }
 
 .keys {
-  font-family: 'Nunito Sans', sans-serif;
   font-family: 'Playpen Sans', cursive;
-  font-size: larger;
-  color: #ff6f61
-}
-
-li {
-  font-size: large;
 }
 
 .intro p:first-child {
   font-weight: bolder;
   font-size: 20px;
-}
-
-#phaser-game {
-  margin-bottom: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 canvas {
