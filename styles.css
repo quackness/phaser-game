@@ -11,13 +11,6 @@
   flex-direction: row-reverse;
   align-items: center;
   margin: 2% auto;
-}
-
-h1 {
-  font-family: 'Comic Neue', cursive;
-}
-
-.higlights {
   border: 5px dotted white;
 }
 
