@@ -31,6 +31,7 @@ var score = 0;
 var scoreText;
 let bombs;
 let music;
+let lost;
 
 var game = new Phaser.Game(config);
 
@@ -171,5 +172,8 @@ function hitBomb(player, bomb) {
   this.physics.pause();
   player.setTint(0xff0000);
   player.anims.play('turn');
+  lost = this.add.text(350, 250, 'You lost!', {
+    fontSize: '32px', fill: 'red', fontStyle: 'italic ', fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif'
+  });
   gameOver = true;
 }
