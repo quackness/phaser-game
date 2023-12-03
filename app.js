@@ -32,6 +32,7 @@ var scoreText;
 let bombs;
 let music;
 let lost;
+var button;
 
 var game = new Phaser.Game(config);
 
@@ -46,12 +47,14 @@ function preload() {
   );
   //music comes from the web site https://www.chosic.com/download-audio/39324/
   this.load.audio('backgroundMusic', 'assets/chaos.mp3');
+  this.load.image('button', 'assets/speaker.jpg');
 }
 
 function create() {
   //instructiosn how to add music taken from chat gtp 
-  music = this.sound.add('backgroundMusic', { volume: 0.1, loop: false });
+  music = this.sound.add('backgroundMusic', { volume: 0.1, loop: true });
   music.play();
+
 
 
   //The background image is 800 x 600 pixels in size, 400 and 300 places it in the center
@@ -64,6 +67,36 @@ function create() {
   platforms.create(750, 220, 'ground');
 
   player = this.physics.add.sprite(100, 450, 'dude');
+
+  button = this.add.image(775, 20, 'button').setInteractive().setDisplaySize(40, 30);
+  console.log(music);
+  button.on('pointerup', function () {
+    // Add functionality when the button is clicked
+    console.log("in function", music.isPlaying);
+    if (music.isPlaying) {
+      music.stop();
+      return;
+      console.log("in function", music.isPlaying);
+    }
+    else if (!music.isPlaying) {
+      music.play();
+      return;
+      console.log("in function", music.isPlaying);
+    }
+
+
+
+
+    // if (music.currentConfig.mute === false) {
+    //   music.stop();
+    //   console.log("is playing?", music.currentConfig.mute)
+    //   console.log("state after disabling?", music.currentConfig)
+    //   console.log("...?", music)
+    // } else {
+    //   music.play();
+    // }
+
+  });
 
   player.setBounce(0.2);
   player.setCollideWorldBounds(true);
