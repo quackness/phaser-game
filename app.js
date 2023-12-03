@@ -33,6 +33,7 @@ let bombs;
 let music;
 let lost;
 var button;
+var soundOn;
 
 var game = new Phaser.Game(config);
 
@@ -47,16 +48,15 @@ function preload() {
   );
   //music comes from the web site https://www.chosic.com/download-audio/39324/
   this.load.audio('backgroundMusic', 'assets/chaos.mp3');
-  this.load.image('button', 'assets/speaker.jpg');
+  this.load.image('button', 'assets/soundOff.jpg');
+  this.load.image('soundOn', 'assets/soundOn.jpg');
 }
 
 function create() {
   //instructiosn how to add music taken from chat gtp 
   music = this.sound.add('backgroundMusic', { volume: 0.1, loop: true });
   music.play();
-
-
-
+  console.log("create start", music.isPlaying);
   //The background image is 800 x 600 pixels in size, 400 and 300 places it in the center
   this.add.image(400, 300, 'sky');
   platforms = this.physics.add.staticGroup();
@@ -69,33 +69,24 @@ function create() {
   player = this.physics.add.sprite(100, 450, 'dude');
 
   button = this.add.image(775, 20, 'button').setInteractive().setDisplaySize(40, 30);
-  console.log(music);
+  soundOn = this.add.image(775, 20, 'soundOn').setInteractive().setDisplaySize(40, 30).setVisible(false);
+  console.log("before button up", music.isPlaying);
+  // https://newdocs.phaser.io/docs/3.54.0/Phaser.Input.Events.GAMEOBJECT_POINTER_UP
   button.on('pointerup', function () {
     // Add functionality when the button is clicked
-    console.log("in function", music.isPlaying);
     if (music.isPlaying) {
       music.stop();
+      // https://newdocs.phaser.io/docs/3.54.0/focus/Phaser.Scenes.Systems-setVisible
+      button.setVisible(false);
+      soundOn.setVisible(true);
       return;
-      console.log("in function", music.isPlaying);
     }
-    else if (!music.isPlaying) {
-      music.play();
-      return;
-      console.log("in function", music.isPlaying);
-    }
-
-
-
-
-    // if (music.currentConfig.mute === false) {
-    //   music.stop();
-    //   console.log("is playing?", music.currentConfig.mute)
-    //   console.log("state after disabling?", music.currentConfig)
-    //   console.log("...?", music)
-    // } else {
-    //   music.play();
-    // }
-
+  });
+  soundOn.on('pointerup', function () {
+    music.play();
+    soundOn.setVisible(false);
+    button.setVisible(true);
+    return;
   });
 
   player.setBounce(0.2);
@@ -196,7 +187,6 @@ function collectStar(player, star) {
     bomb.setBounce(1);
     bomb.setCollideWorldBounds(true);
     bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-
   }
 }
 
