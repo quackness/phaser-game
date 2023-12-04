@@ -32,7 +32,7 @@ var scoreText;
 let bombs;
 let music;
 let lost;
-var button;
+var soundOff;
 var soundOn;
 
 var game = new Phaser.Game(config);
@@ -49,7 +49,7 @@ function preload() {
   //music comes from the web site https://www.chosic.com/download-audio/39324/
   this.load.audio('backgroundMusic', 'assets/chaos.mp3');
   // https://iconscout.com/icons/volume-off
-  this.load.image('button', 'assets/soundOff.jpg');
+  this.load.image('soundOff', 'assets/soundOff.jpg');
   this.load.image('soundOn', 'assets/soundOn.jpg');
 }
 
@@ -69,16 +69,16 @@ function create() {
 
   player = this.physics.add.sprite(100, 450, 'dude');
 
-  button = this.add.image(775, 20, 'button').setInteractive().setDisplaySize(40, 30);
+  soundOff = this.add.image(775, 20, 'soundOff').setInteractive().setDisplaySize(40, 30);
   soundOn = this.add.image(775, 20, 'soundOn').setInteractive().setDisplaySize(40, 30).setVisible(false);
   console.log("before button up", music.isPlaying);
   // https://newdocs.phaser.io/docs/3.54.0/Phaser.Input.Events.GAMEOBJECT_POINTER_UP
-  button.on('pointerup', function () {
+  soundOff.on('pointerup', function () {
     // Add functionality when the button is clicked
     if (music.isPlaying) {
       music.stop();
       // https://newdocs.phaser.io/docs/3.54.0/focus/Phaser.Scenes.Systems-setVisible
-      button.setVisible(false);
+      soundOff.setVisible(false);
       soundOn.setVisible(true);
       return;
     }
@@ -86,7 +86,7 @@ function create() {
   soundOn.on('pointerup', function () {
     music.play();
     soundOn.setVisible(false);
-    button.setVisible(true);
+    soundOff.setVisible(true);
     return;
   });
 
