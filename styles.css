@@ -3,69 +3,97 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@media only screen and (max-width: 600px) {
+  .higlights {
+    display: flex;
+    flex-direction: column;
+  }
 
-.higlights {
-  margin-top: 3%;
-  width: 85%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  margin: 2% auto;
-  border: 5px dotted white;
+  .game {
+    width: 90%;
+  }
+
+  .call-to-action {
+    height: auto
+  }
+
+  .call-to-action>button {
+    width: 50%;
+    margin-bottom: 3%;
+  }
+
+  canvas {
+    width: 90%;
+  }
 }
 
-.higlights-text {
-  flex-direction: column;
-  margin: auto 30px;
-}
 
-.higlights img {
-  width: 300px;
-  height: auto;
-}
+@media only screen and (min-width: 601px) {
 
-.higlights-text p:first-child {
-  font-weight: bolder;
-  font-size: 20px;
-  margin-bottom: 1%;
-  color: brown;
-}
 
-li::marker {
-  color: #ff6f61;
-}
+  .higlights {
+    margin-top: 3%;
+    width: 85%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 2% auto;
+    border: 5px dotted white;
+  }
 
-.call-to-action {
-  text-align: center;
-  height: 190px;
-  border-top: solid coral 3px;
-  border-bottom: solid coral 3px;
-}
+  .higlights-text {
+    flex-direction: column;
+    margin: auto 30px;
+  }
 
-.call-to-action p {
-  color: aliceblue;
-  font-weight: bolder;
-  margin-bottom: 40px;
-  font-size: 20px;
-  margin-top: 20px;
-}
+  .higlights img {
+    width: 300px;
+    height: auto;
+  }
 
-.keys {
-  font-family: 'Playpen Sans', cursive;
-}
+  .higlights-text p:first-child {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 1%;
+    color: brown;
+  }
 
-.intro p:first-child {
-  font-weight: bolder;
-  font-size: 20px;
-}
+  li::marker {
+    color: #ff6f61;
+  }
 
-canvas {
-  margin-top: 2%;
-}
+  .call-to-action {
+    text-align: center;
+    height: 190px;
+    border-top: solid coral 3px;
+    border-bottom: solid coral 3px;
+  }
 
-.game {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: xx-large;
-  color: #ff6f61;
-  font-weight: bolder;
+  .call-to-action p {
+    color: aliceblue;
+    font-weight: bolder;
+    margin-bottom: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .keys {
+    font-family: 'Playpen Sans', cursive;
+  }
+
+  .intro p:first-child {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  canvas {
+    margin-top: 2%;
+  }
+
+  .game {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+    color: #ff6f61;
+    font-weight: bolder;
+  }
 }
